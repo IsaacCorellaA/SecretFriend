@@ -44,6 +44,10 @@ function mostrarListaPantalla(){
 function sortearAmigo(){
 
     let resultado = document.getElementById("resultado");
+
+    resultado.innerHTML = "";
+    console.log("Área de resultados limpia.");
+    listaAmigos.innerHTML = ""; 
     
     if (amigos.length === 0) {
         alert("No hay amigos en la lista para sortear.");
