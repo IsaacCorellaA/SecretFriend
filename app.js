@@ -17,5 +17,12 @@ function agregarAmigo(){
 
         //console.log("Presiono")
 
+    //console.log(amigos);
+    limpiarInput();
         
+}
+
+
+function limpiarInput(){
+    document.querySelector('#amigo').value="";
 }
