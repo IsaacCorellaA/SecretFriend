@@ -11,7 +11,7 @@ function agregarAmigo(){
     }else{
         amigos.push(nombre);
         //console.log("Ingresé el amigo a la lista")
-        alert("El nombre se registró");
+        //alert("El nombre se registró");
     } 
 
         //console.log("Presiono")
@@ -36,5 +36,26 @@ function mostrarListaPantalla(){
 
     for (let i = 0; i < amigos.length; i++) {
         lista.innerHTML += `<li>${amigos[i]}</li>`; //debo agregar al elemento del html la iteración en amigos, así puedo mostrar los elementos hacia abajo
+        
     }
 }
+
+
+function sortearAmigo(){
+
+    let resultado = document.getElementById("resultado");
+    
+    if (amigos.length === 0) {
+        alert("No hay amigos en la lista para sortear.");
+        return;  
+    }
+
+    nombreAleatorio= Math.floor(Math.random()*amigos.length);
+    //console.log(nombreAleatorio);
+
+    amigoSorteado= amigos[nombreAleatorio];
+
+    resultado.innerHTML = `El amigo secreto es: <strong>${amigoSorteado}</strong>`;
+
+}
+
